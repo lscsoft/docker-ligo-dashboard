@@ -8,5 +8,6 @@ RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selectio
 RUN apt-get update \
     && apt-get install --assume-yes --no-install-recommends \
       nagios3 \
+      nagios-plugins \
       nagios-nrpe-plugin && \
     rm -rf /var/lib/apt/lists/*
